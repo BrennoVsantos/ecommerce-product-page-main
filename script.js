@@ -109,7 +109,7 @@ function updatePag(){
         contaPaginas = 4
     }
 
-    product.style.backgroundImage = `url(../images/image-product-${contaPaginas}.jpg)`;
+    product.innerHTML = `<img src="images/image-product-${contaPaginas}.jpg" />`;
 }
 
 function updateQtd(){
@@ -211,7 +211,7 @@ function updatePagModal(){
         contaPaginasModal = 4
     }
 
-    modalPreview.style.backgroundImage = `url(../images/image-product-${contaPaginasModal}.jpg)`;
+    modalPreview.innerHTML = `<img src="images/image-product-${contaPaginasModal}.jpg" />`;
 }
 
 modalBtns();

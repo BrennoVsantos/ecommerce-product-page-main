@@ -48,10 +48,13 @@
 .modal-preview-screen {
   width: 650px;
   height: 650px;
-  background-image: url(../images/image-product-1.jpg);
-  background-size: cover;
   overflow: hidden;
   border-radius: 20px;
+}
+
+.modal-preview-screen img {
+  object-fit: cover;
+  width: 100%;
 }
 
 .modal-thumbs {

@@ -20,12 +20,15 @@ main {
   width: 450px;
   height: 450px;
   border-radius: 20px;
-  background-image: url(../images/image-product-1.jpg);
-  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  overflow: hidden;
+}
+
+.preview img {
+  width: 100%;
 }
 
 .action-btns {
