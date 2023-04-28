@@ -6,6 +6,7 @@ const cartInfo = document.querySelector('.cart-info');
 const apagaCart = document.querySelector('#apagar');
 
 const product = document.querySelector('.preview');
+const productImg = document.querySelector('#preview-img');
 
 const notify = document.querySelector('#notify');
 
@@ -201,7 +202,7 @@ function updatePagModal(){
         contaPaginas = 4
     }
 
-    product.innerHTML = `<img src="images/image-product-${contaPaginas}.jpg" />`;
+    productImg.src = `images/image-product-${contaPaginas}.jpg`;
     modalPreview.innerHTML = `<img src="images/image-product-${contaPaginas}.jpg" />`;
 }
 
