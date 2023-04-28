@@ -30,8 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/BrennoVsantos/ecommerce-product-page-main)
-- Live Site URL: [Add live site URL here](https://brennovsantos.github.io/ecommerce-product-page-main/)
+- Live Site URL: [https://brennovsantos.github.io/ecommerce-product-page-main/]
 
 ## My process
 
