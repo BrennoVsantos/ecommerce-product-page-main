@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>E-commerce product page | Frontend Mentor</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
+    <link rel="stylesheet" href="css/display.css" />
+
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <article class="modal-container">
+      <div class="modal-wrapper">
+        <div class="modal-close">
+          <button class="close-modal"><i class="fa-solid fa-x"></i></button>
+        </div>
+
+        <div class="modal-preview">
+          <button class="modal-prev">
+            <i class="fa-solid fa-angle-left"></i>
+          </button>
+          <div class="modal-preview-screen"></div>
+          <button class="modal-next">
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+        </div>
+
+        <div class="modal-thumbs">
+          <button class="modal-thumb-btn modal-btn1">
+            <span class="modal-bright"></span>
+          </button>
+          <button class="modal-thumb-btn modal-btn2">
+            <span class="modal-bright"></span>
+          </button>
+          <button class="modal-thumb-btn modal-btn3">
+            <span class="modal-bright"></span>
+          </button>
+          <button class="modal-thumb-btn modal-btn4">
+            <span class="modal-bright"></span>
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <section id="mob-nav-container">
+      <nav class="mob-nav">
+        <ul class="mob-nav-links">
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <header>
+      <div class="header-container">
+        <nav class="desk-nav">
+          <button id="hamburguer">
+            <img src="images/icon-menu.svg" alt="Menu button" />
+          </button>
+
+          <img src="images/logo.svg" alt="Sneaker Logo" draggable="false" />
+
+          <ul class="nav-links">
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="user-info">
+          <button id="cart">
+            <img src="images/icon-cart.svg" alt="cart" />
+            <span id="notify">0</span>
+          </button>
+
+          <button id="profile"></button>
+        </div>
+
+        <div class="cart-container">
+          <div class="cart-top">
+            <h1>Cart</h1>
+          </div>
+
+          <div class="cart-info">
+            <div class="product-checkout">
+              <img src="images/image-product-1-thumbnail.jpg" />
+
+              <div class="checkout-info">
+                <p>Fall Limited Edition Sneakers</p>
+                <p>
+                  $125.00 x <span id="qtd">3</span>
+                  <span id="checkout-total" class="bold">$375.00</span>
+                </p>
+              </div>
+
+              <button id="apagar"><i class="fa-solid fa-trash-can"></i></button>
+            </div>
+            <button id="checkout">Checkout</button>
+          </div>
+
+          <div class="cart-empty">
+            <h1 id="empty">Your cart is empty</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="product-imgs">
+        <div class="product-container">
+          <div class="preview">
+            <div class="action-btns">
+              <button class="volta">
+                <i class="fa-solid fa-angle-left"></i>
+              </button>
+              <button class="avanca">
+                <i class="fa-solid fa-angle-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="thumbs">
+            <button id="preview1">
+              <span class="btn-glow"></span>
+            </button>
+            <button id="preview2">
+              <span class="btn-glow"></span>
+            </button>
+            <button id="preview3">
+              <span class="btn-glow"></span>
+            </button>
+            <button id="preview4">
+              <span class="btn-glow"></span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="product-info">
+        <div class="info-container">
+          <h3 class="company">Sneaker Company</h3>
+
+          <h1 class="title">Fall Limited Edition Sneakers</h1>
+
+          <p class="info-text">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+
+          <div class="prices">
+            <h2 class="new-price">$125.00</h2>
+            <p class="old-price">$250.00</p>
+          </div>
+
+          <div class="buttons">
+            <div class="qtd-container">
+              <button class="minus"><i class="fa-solid fa-minus"></i></button>
+              <div class="result"><h4>0</h4></div>
+              <button class="plus"><i class="fa-solid fa-plus"></i></button>
+            </div>
+
+            <button id="add-product">
+              <i class="fa-solid fa-cart-shopping"></i>
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/BrennoVsantos" target="_blank">Brenno</a>.
+      </div>
+    </footer>
+  </body>
+</html>

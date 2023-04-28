@@ -1,0 +1,72 @@
+#mob-nav-container {
+  background-color: transparent;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+  overflow: hidden;
+  pointer-events: none;
+  display: none;
+}
+
+#mob-nav-container.container-on {
+  background-color: rgba(0, 0, 0, 0.411);
+}
+
+.mob-nav {
+  width: 0%;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: 0.3s ease;
+  pointer-events: all;
+}
+
+.mob-nav.nav-on {
+  width: 70%;
+  max-width: 230px;
+}
+
+.mob-nav-links {
+  height: 55%;
+  list-style-type: none;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.mob-nav-links li {
+  cursor: pointer;
+}
+
+.mob-nav-links a:hover {
+  color: var(--Orange);
+}
+
+.mob-nav-links a {
+  text-decoration: none;
+  color: black;
+  transition: 0.2s ease;
+}
+
+@keyframes container-in {
+  from {
+    background-color: transparent;
+  }
+
+  to {
+    background-color: rgba(0, 0, 0, 0.411);
+  }
+}
+
+@media (max-width: 840px) {
+  #mob-nav-container {
+    display: block;
+  }
+}
