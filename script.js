@@ -45,9 +45,7 @@ const mobNav = document.querySelector('.mob-nav');
 const mobNavLinks = document.querySelectorAll('.mob-nav-links');
 
 let contaPaginas = 1;
-let quantidade = 0;
-
-let contaPaginasModal = 1;
+let quantidade = 0; 
 
 cartBtn.addEventListener('click', () => {
     cartContainer.classList.toggle('cart-on');
@@ -77,12 +75,12 @@ apagaCart.addEventListener('click', () => {
 
 btnAvanca.addEventListener('click', () => {
     contaPaginas ++;
-    updatePag();
+    updatePagModal();
 })
 
 btnVolta.addEventListener('click', () => {
     contaPaginas --;
-    updatePag();
+    updatePagModal();
 })
 
 hamburguerBtn.addEventListener('click', () => {
@@ -102,15 +100,6 @@ telaPreview.addEventListener('click', () => {
     }
 })
 
-function updatePag(){
-    if(contaPaginas > 4){
-        contaPaginas = 1
-    } else if (contaPaginas < 1){
-        contaPaginas = 4
-    }
-
-    product.innerHTML = `<img src="images/image-product-${contaPaginas}.jpg" />`;
-}
 
 function updateQtd(){
     if(quantidade < 0){
@@ -124,22 +113,22 @@ function previews(){
 
     preview1.addEventListener('click', () => {
         contaPaginas = 1
-        updatePag();
+        updatePagModal();
     })
     
     preview2.addEventListener('click', () => {
         contaPaginas = 2
-        updatePag();
+        updatePagModal();
     })
     
     preview3.addEventListener('click', () => {
         contaPaginas = 3
-        updatePag();
+        updatePagModal();
     })
     
     preview4.addEventListener('click', () => {
         contaPaginas = 4
-        updatePag();
+        updatePagModal();
     })
 }
 
@@ -169,32 +158,32 @@ function mobNavigation(){
 
 function modalBtns(){
     modalThumb1.addEventListener('click', () => {
-        contaPaginasModal = 1;
+        contaPaginas = 1;
         updatePagModal()
     })
 
     modalThumb2.addEventListener('click', () => {
-        contaPaginasModal = 2;
+        contaPaginas = 2;
         updatePagModal()
     })
 
     modalThumb3.addEventListener('click', () => {
-        contaPaginasModal = 3;
+        contaPaginas = 3;
         updatePagModal()
     })
 
     modalThumb4.addEventListener('click', () => {
-        contaPaginasModal = 4;
+        contaPaginas = 4;
         updatePagModal()
     })
 
     modalPrev.addEventListener('click', () => {
-        contaPaginasModal --
+        contaPaginas --
         updatePagModal()
     })
 
     modalNext.addEventListener('click', () => {
-        contaPaginasModal ++
+        contaPaginas ++
         updatePagModal()
     })
 
@@ -205,13 +194,15 @@ function modalBtns(){
 }
 
 function updatePagModal(){
-    if(contaPaginasModal > 4){
-        contaPaginasModal = 1
-    } else if (contaPaginasModal < 1){
-        contaPaginasModal = 4
+
+    if(contaPaginas > 4){
+        contaPaginas = 1
+    } else if (contaPaginas < 1){
+        contaPaginas = 4
     }
 
-    modalPreview.innerHTML = `<img src="images/image-product-${contaPaginasModal}.jpg" />`;
+    product.innerHTML = `<img src="images/image-product-${contaPaginas}.jpg" />`;
+    modalPreview.innerHTML = `<img src="images/image-product-${contaPaginas}.jpg" />`;
 }
 
 modalBtns();
