@@ -39,7 +39,6 @@ main {
   align-items: center;
   padding: 0px 10px;
   display: none;
-  z-index: 100;
   position: absolute;
 }
 
